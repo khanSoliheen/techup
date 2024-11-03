@@ -1,0 +1,10 @@
+.container {
+    .btn-container {
+        float: right;
+        .btn {
+            display: block;
+            background-color: gray;
+            margin: 5px;
+        }
+    }
+}
