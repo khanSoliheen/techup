@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Region</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        @for (customer of customers; track $index) {
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.region }}</td>
+            <td>{{ customer.country }}</td>
+        }
+      </tr>
+    </tbody>
+  </table>
+  
