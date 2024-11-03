@@ -1,0 +1,24 @@
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name*</label>
+    <input type="text" formControlName="name" class="form-control" id="name" required />
+  </div>
+  
+  <div class="mb-3">
+    <label for="email" class="form-label">Email*</label>
+    <input type="email" formControlName="email" class="form-control" id="email" required />
+  </div>
+  
+  <div class="mb-3">
+    <label for="region" class="form-label">Region*</label>
+    <ngx-select formControlName="region" [items]="regions"  placeholder="Select Region" (select)="onRegionChange('region', $event)" [multiple]="true">
+    </ngx-select>
+  </div>
+  
+  <div class="mb-3">
+    <label for="country" class="form-label">Country*</label>
+    <ngx-select formControlName="country" [items]="countries" placeholder="Select Country" [multiple]="true"></ngx-select>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Create Customer</button>
+</form>
