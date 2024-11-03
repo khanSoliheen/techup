@@ -1,0 +1,29 @@
+<div class="pin-list-container">
+  <h3>List of Pins</h3>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Collaborators</th>
+        <th>Privacy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        @for (pin of pins; track $index) {
+            <td>{{ pin.title }}</td>
+            <td><img [src]="pin.image" width="50" alt="Pin Image" class="table-image" /></td>
+            <td>
+              <ul class="collaborators-list">
+                @for (collaborator of pin.collaborators; track $index) {
+                    <li>{{ collaborator }}</li>
+                }
+              </ul>
+            </td>
+            <td>{{ pin.privacy }}</td>
+        }
+      </tr>
+    </tbody>
+  </table>
+</div>
